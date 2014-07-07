@@ -1,0 +1,389 @@
+<script type="text/javascript" src="http://content.bounty.com/images/css/bounty/personal/js/slides.min.jquery.js"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$(".comps-slides").slides({
+			preload: true,
+			preloadImage: "http://content.bounty.com/images/css/bounty/personal/img/loading.gif",
+			play: 5000,
+			pause: 2500,
+			hoverPause: true
+		});
+	});
+
+</script>
+
+<script src="http://content.bounty.com/images/css/comp/infacol/SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+	$(document).ready(function() {
+		$("#more_info").hide();
+		$("#show_more").click(function(){
+		$("#more_info").slideToggle("slow");
+	});
+
+	$('.webform-client-form').appendTo('.webform');  // moves webform from footer to div with class =”webform”
+	$('.messages').appendTo('.webform');  // moves error messages from top of page to div with class =”webform”
+	$('#content-area').css('display','block');  // Displays content once webform has been moved   
+
+	newlink = document.URL;
+	if ($('.messages a').length > 0 && $('.messages a').text() == 'login') {
+		$('.messages a').attr('href','http://member.bounty.com/login/login.asp?RedirectTo='+newlink);
+	}  
+
+	});
+</script>
+
+<style type="text/css">
+
+/* Site fixes */
+h2.article-title {
+	display: none;
+}
+ul.links.inline {
+	/*padding-top: 20px;*/
+	display: none;
+}
+#article .content ul {
+	padding-left: 0px;
+}
+div.block-inner h3.title {
+	display: none;
+}
+#content-area {  /* Hides content area until webform has been moved so users don't see things appearing and disappearing */
+	display:none;
+}
+#content-area h2 {
+	display:inline-block !important;
+}
+#content-area h2.article-title {
+	display:none !important;
+}
+/* end Site fixes */
+
+/* global */
+
+body {
+	margin:0;
+	padding: 0;
+}
+
+.clear {
+	clear:both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.displace {
+	position: absolute;
+	left:-5000px;
+}
+
+.bapps_pink {
+	color: #F27292;
+}
+
+.bapps_dblue {
+	color: #003974;
+}
+
+.bapps_lblue {
+	color:#00AAE7;
+}
+
+.bapps_teal {
+	color:#00AA9D;
+}
+
+/*@font-face {
+    font-family: 'fs_albertbold';
+    src: url('fonts/fs_albert-bold-webfont.eot');
+    src: url('fonts/fs_albert-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/fs_albert-bold-webfont.woff') format('woff'),
+         url('fonts/fs_albert-bold-webfont.ttf') format('truetype'),
+         url('fonts/fs_albert-bold-webfont.svg#fs_albertbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+@font-face {
+    font-family: 'fs_albertbold';
+    src: url('/sites/all/themes/bounty/fonts/fs_albert-bold-webfont.eot');
+    src: url('/sites/all/themes/bounty/fonts/fs_albert-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/sites/all/themes/bounty/fonts/fs_albert-bold-webfont.woff') format('woff'),
+         url('/sites/all/themes/bounty/fonts/fs_albert-bold-webfont.ttf') format('truetype'),
+         url('/sites/all/themes/bounty/fonts/fs_albert-bold-webfont.svg#fs_albertbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* end global */
+
+#CLIENT_comp_2014_06 {
+	width:770px;
+	margin: 0 auto;
+	font-family: arial,Helvetica,sans-serif;
+	font-size: 14px !important;
+	color:#696969;
+	background: url('http://content.bounty.com/images/css/comp/tena/2014_06/tena_background.jpg') left top no-repeat;
+}
+
+/* web form */
+
+/* form styles */
+
+#CLIENT_comp_2014_06 .webform {
+	float: left;
+	position: relative;
+	margin: 0 0 5px;
+	padding: 0;
+	width:390px;
+	border: 1px solid #E41E93;
+	border-radius: 5px 5px 0 0;
+}
+
+#CLIENT_comp_2014_06 .webform .form-item {
+	margin: 0;
+	padding: 0;
+}
+
+#CLIENT_comp_2014_06 .webform .form-item .form-radios .form-item {
+	margin: 0;
+	padding: 0;
+}
+
+#CLIENT_comp_2014_06 .webform .form-item label {
+	color:#FFFFFF;
+	font-size:17px;
+	font-weight: normal;
+	font-style: italic;
+	padding:5px 10px 10px 10px;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 20px;
+	background: #f485bd;
+}
+#CLIENT_comp_2014_06 .webform .form-item label.option {
+	background: none !important;
+	color:#E41E93;
+	margin: 0 0 0 10px;
+	padding: 0 0 5px;
+	position: relative;
+	top:20px;
+	display: block;
+}
+
+#CLIENT_comp_2014_06 .webform .form-item input {
+	margin: 0px;
+	padding: 0px;
+}
+
+#CLIENT_comp_2014_06 #comp #comp_question .webform .form-item .form-radios label.option input.form-radio {
+	margin: 0 10px 0 0;
+}
+
+#CLIENT_comp_2014_06 .webform .form-item .description {
+	position: relative;
+	left: 10px;
+	top: -100px;
+}
+
+#CLIENT_comp_2014_06 .webform #webform-component-consent label { /* #### this hides the label associated with the Concent field ### */
+	/*color: green;*/
+	display: none;
+}
+
+#CLIENT_comp_2014_06 .webform .form-item span.form-required {
+	display: none;
+}
+
+#CLIENT_comp_2014_06 .webform #edit-submitted-consent-1-wrapper .option { /* #### this allows the tickbox and "I Accept <label> to show in place ### */
+	display: none;
+	/*font-size: 12px;
+	line-height: 15px
+	color: #FFFFFF;*/
+}
+
+#CLIENT_comp_2014_06 .webform #edit-submit {
+	border: 1px solid #E41E93;
+	border-radius: 5px;
+	cursor: pointer;
+	height: 35px;
+	/*line-height: 999px;*/
+	margin: 0 20px 0 0;
+	width: 140px;
+	color:#FFFFFF;
+	font-weight: normal;
+	font-size: 20px;
+	float: right;
+	position: absolute;
+	top:125px;
+	right: 0;
+	background: #f485bd; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ODViZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZjI1ZGFhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U2MTg4MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top,  #f485bd 0%, #f25daa 1%, #e61880 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f485bd), color-stop(1%,#f25daa), color-stop(100%,#e61880)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f485bd 0%,#f25daa 1%,#e61880 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f485bd 0%,#f25daa 1%,#e61880 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f485bd 0%,#f25daa 1%,#e61880 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f485bd 0%,#f25daa 1%,#e61880 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f485bd', endColorstr='#e61880',GradientType=0 ); /* IE6-8 */
+}
+
+#CLIENT_comp_2014_06 .webform #edit-submit:hover {
+	background: #e61880;
+}
+
+#CLIENT_comp_2014_06 .webform .messages {
+	margin-top:20px;
+	width: 80% !important;
+}
+
+/* end forms */
+
+/* Ts & Cs */
+
+/* collapsible panel styles here */
+
+#CLIENT_comp_2014_06 .CollapsiblePanel {
+	margin: 0px;
+	padding: 0px;
+}
+
+#CLIENT_comp_2014_06 .CollapsiblePanelTab {
+	margin: 0px;
+	padding: 2px;
+	cursor: pointer;
+	height: auto;
+	color:#000000;
+	padding: 0;
+	font-weight:bold;
+}
+
+#CLIENT_comp_2014_06 .CollapsiblePanelContent {
+	margin: 0;
+	padding: 0 15px 10px 15px;
+	/*background-color: #f1a08c;*/
+	color:#000;
+}
+
+#CLIENT_comp_2014_06 .CollapsiblePanelContent li {
+	color:#000 !important;
+}
+
+#CLIENT_comp_2014_06 .CollapsiblePanelOpen .CollapsiblePanelTab {
+    color: #E41E93;
+    text-decoration: none;
+    font-size: 12px;
+}
+#CLIENT_comp_2014_06 .CollapsiblePanelClosed .CollapsiblePanelTab {
+    text-decoration: underline;
+    color: #E41E93;
+    font-size: 12px;
+}
+#CLIENT_comp_2014_06 .CollapsiblePanelTabHover, .CollapsiblePanelOpen .CollapsiblePanelTabHover {
+	/*background-color: #e26546;
+	text-decoration:underline;*/
+}
+#CLIENT_comp_2014_06 .CollapsiblePanelFocused .CollapsiblePanelTab {
+	/*background-color:#e26546;*/
+}
+
+#CLIENT_comp_2014_06 .CollapsiblePanelContent table {
+	margin-top: 20px;
+}
+
+#CLIENT_comp_2014_06 .CollapsiblePanelContent table td {
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	padding: 10px;
+}
+
+#CLIENT_comp_2014_06 #tc #CollapsiblePanel1.CollapsiblePanel .CollapsiblePanelTab p {
+	/*color:#FFFFFF;*/
+}
+
+#CLIENT_comp_2014_06 #tc #CollapsiblePanel1.CollapsiblePanel .CollapsiblePanelTab li {
+	color:#666666;
+	font-weight: normal;
+	line-height: 18px;
+	font-size: 14px;
+	padding: 0 0 5px;
+}
+
+#CLIENT_comp_2014_06 #tc #CollapsiblePanel1.CollapsiblePanel .CollapsiblePanelTab li a {
+	color:#FF6600;
+	font-weight: normal;
+	line-height: 18px;
+	font-size: 14px;
+}
+
+/* end collapsible panel styles */
+
+</style>
+
+<div id="CLIENT_comp_2014_06">
+
+	<div class="webform"></div>
+
+	<!-- DON'T FORGET TO UPDATE THE T&CS! -->
+	<div id="tc">
+		<div id="CollapsiblePanel1" class="CollapsiblePanel">
+			<div class="CollapsiblePanelTab" tabindex="0">
+				Terms and Conditions
+			</div>
+			<div class="CollapsiblePanelTab" tabindex="0" style="background:#FFFFFF;color:#666666;width:700px;text-align:left;">
+				<ol>
+					<li>Bounty Members have the opportunity to enter the free prize draw for the chance to win an iPad (16GB) and a year's supply of Tena Lights (the "Prize").</li>
+					<li>To enter the prize draw log into your account on the Bounty website at www.bounty.com, and simply click to enter on the competition page.</li>
+					<li>The closing date for entry to the free prize draw is 15th July 2014.</li>
+					<li>The winner will be chosen at random from all successful entrants.</li>
+					<li>The winner will be notified by email within 14 days of the prize draw.</li>
+					<li>Within 14 days of notification the winner is required to email confirmation of their postal address and acceptance of the Prize to the Promoter. In the event that the winner does not provide the required confirmation within 14 days the entry may be disqualified and an alternative winner may be chosen.</li>
+					<li>The Prize will be sent by 1st class post recorded delivery, to the winner by Tena within 14 days of receipt of address confirmation from the winner.</li>
+					<li>The Promoter will not be liable for any prize that does not reach the winner for reasons beyond the Promoter’s reasonable control.</li>
+					<li>The prize draw is open to Bounty Members who must have a valid email address.</li>
+					<li>All entrants must be aged 18 years or over and resident in the UK. The Prize will be delivered free of charge to an address within the UK. The winner must pay for the cost of delivery outside of this area.</li>
+					<li>Only one entry per person/household.</li>
+					<li>No applications from agents, third parties, organised groups or applications automatically generated by computer will be accepted.<li>
+					<li>The Prize cannot be transferred and no cash alternative is available.</li>
+					<li>The Prize is as stated and is subject to availability.  In the event of the Prize, of a part of the Prize being unavailable, the Promoter reserves the right to offer an alternative prize of equal or greater value.</li>
+					<li>The winner's details will only be used for administration of the prize by the Promoter and Tena and publication of the prize draw winner as detailed below and for no other purpose.</li>
+					<li>The winner’s name and county will be available within 28 days of the closing date on request to the Promoter by email to <a href="mailto:customerservices@bounty.com">customerservices@bounty.com</a>.</li>
+					<li>The winner consents to their name and county being disclosed to other entrants on request.</li>
+					<li>Use of a false name or address will result in disqualification.</li>
+					<li>The Promoter reserves the right to exclude at its sole discretion any entries which are likely to offend others, break the law or are otherwise not consistent with the purpose of this initiative.</li>
+					<li>Entries not completed in ‎accordance with these terms and conditions will not be accepted. No responsibility is accepted for any entries that are not submitted on time or in full or not received by the Promoter for any reason, such as corrupted web pages.</li>
+					<li>Employees of Bounty (UK) Limited and Tena or any associated companies and immediate members of their families, are not eligible to enter the prize draw.</li>
+					<li>By entering the prize draw, entrants agree to be bound by the rules and by any other requirements set out in the promotional material.<li>
+					<li>The decisions of the Promoter will be final and no correspondence will be entered into.</li>
+					<li>By entering the prize draw, entrants agree to be bound by these terms and conditions, which are governed in accordance with the laws of England and Wales.</li>
+					<li>In the event that any terms and condition(s) are deemed invalid, illegal or otherwise unenforceable, they shall be severed from these terms and the remaining clauses will remain in force.</li>
+				</ol>
+
+				<p>Promoter: Bounty (UK) Limited, 29 Broadwater Road, Welwyn Garden City, Hertfordshire AL7 3BQ.</p>
+
+				<p><strong>Provider of the Prize (Tena):</strong> SCA Hygiene Products UK Limited, Southfields Road, Dunstable, Bedfordshire, LU6 3EJ (Reg. No 3226403)</p>
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- closes the lot!!! -->
+
+<script type="text/javascript">
+ 
+$(document).ready(function(){
+  var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
+});
+
+</script>
